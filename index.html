@@ -1,0 +1,1386 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WOTA｜非洲高端半客製化行程</title>
+  <meta name="description" content="WOTA 由顧問協助依照目的地、季節、預算、同行成員、體力與體驗偏好，設計安全、舒適、稀缺的高端非洲旅程。">
+  <style>
+    :root {
+      --charcoal: #171513;
+      --warm-black: #211b17;
+      --espresso: #30251e;
+      --ivory: #fbf7ef;
+      --ivory-deep: #f4eadc;
+      --sand: #d7c4a4;
+      --taupe: #9d8c77;
+      --camel: #b68b57;
+      --gold: #c6a66b;
+      --bronze: #8e6a43;
+      --olive: #4a5541;
+      --forest: #243229;
+      --ink: #2b2620;
+      --muted: #71695f;
+      --line: rgba(48, 37, 30, .16);
+      --line-dark: rgba(255, 247, 239, .18);
+      --max: 1200px;
+      --radius-xs: 4px;
+      --radius-sm: 6px;
+      --radius-md: 9px;
+      --radius-lg: 13px;
+      --radius-xl: 17px;
+      --serif: "Cormorant Garamond", "Noto Serif TC", "Source Han Serif TC", "Songti TC", "Times New Roman", serif;
+      --sans: Inter, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--ivory);
+      font-family: var(--sans);
+      letter-spacing: 0;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 10;
+      pointer-events: none;
+      opacity: .035;
+      background-image:
+        linear-gradient(90deg, rgba(48, 37, 30, .8) 1px, transparent 1px),
+        linear-gradient(rgba(48, 37, 30, .8) 1px, transparent 1px);
+      background-size: 96px 96px;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; width: 100%; height: auto; }
+    button { font: inherit; }
+
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 50;
+      height: 78px;
+      color: var(--ivory);
+      border-bottom: 1px solid rgba(255, 247, 239, .14);
+      transition: background .25s ease, color .25s ease, border-color .25s ease, backdrop-filter .25s ease;
+    }
+    .site-header.is-scrolled {
+      color: var(--espresso);
+      background: rgba(251, 247, 239, .88);
+      border-bottom-color: rgba(48, 37, 30, .14);
+      backdrop-filter: blur(18px);
+    }
+    .nav-shell {
+      width: min(var(--max), calc(100% - 80px));
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 12px;
+      min-width: 158px;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: .18em;
+    }
+    .brand span {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: .24em;
+      opacity: .75;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-left: auto;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+    .nav-links a {
+      opacity: .84;
+      transition: opacity .2s ease;
+    }
+    .nav-links a:hover { opacity: 1; }
+    .header-cta {
+      min-height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 18px;
+      border: 1px solid currentColor;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      white-space: nowrap;
+      transition: background .2s ease, color .2s ease, transform .2s ease;
+    }
+    .header-cta:hover {
+      background: currentColor;
+      color: var(--charcoal);
+      transform: translateY(-1px);
+    }
+    .site-header.is-scrolled .header-cta:hover {
+      color: var(--ivory);
+      background: var(--espresso);
+      border-color: var(--espresso);
+    }
+
+    .btn {
+      min-height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 24px;
+      border-radius: var(--radius-sm);
+      border: 1px solid transparent;
+      font-size: 14px;
+      line-height: 1.2;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: transform .2s ease, background .2s ease, border-color .2s ease, color .2s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary {
+      color: var(--ivory);
+      background: var(--espresso);
+      border-color: var(--espresso);
+    }
+    .btn-primary.gold {
+      color: var(--charcoal);
+      background: var(--gold);
+      border-color: var(--gold);
+    }
+    .btn-outline {
+      color: var(--espresso);
+      background: transparent;
+      border-color: rgba(48, 37, 30, .28);
+    }
+    .btn-ghost {
+      color: var(--ivory);
+      border-color: rgba(255, 247, 239, .44);
+      background: rgba(255, 247, 239, .08);
+      backdrop-filter: blur(10px);
+    }
+    .btn svg {
+      width: 16px;
+      height: 16px;
+      stroke-width: 1.5;
+    }
+
+    .hero {
+      min-height: 830px;
+      position: relative;
+      display: grid;
+      align-items: end;
+      overflow: hidden;
+      color: var(--ivory);
+      background:
+        linear-gradient(90deg, rgba(17, 15, 13, .92) 0%, rgba(25, 22, 18, .66) 44%, rgba(25, 22, 18, .08) 100%),
+        linear-gradient(0deg, rgba(17, 15, 13, .85) 0%, rgba(17, 15, 13, .08) 48%),
+        url("https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=2400&auto=format&fit=crop") center / cover;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .2;
+      background-image: linear-gradient(90deg, transparent 0, transparent calc(16.666% - 1px), rgba(255,255,255,.45) calc(16.666% - 1px), rgba(255,255,255,.45) 16.666%);
+      background-size: calc(100% / 6) 100%;
+      mix-blend-mode: screen;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 26%;
+      background: linear-gradient(0deg, var(--charcoal), transparent);
+      opacity: .7;
+    }
+    .hero-rail {
+      position: absolute;
+      left: clamp(24px, 4vw, 58px);
+      bottom: 88px;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-size: 11px;
+      letter-spacing: .32em;
+      text-transform: uppercase;
+      color: rgba(255, 247, 239, .72);
+    }
+    .hero-rail::before {
+      content: "";
+      width: 1px;
+      height: 72px;
+      background: rgba(255, 247, 239, .44);
+    }
+    .hero-shell {
+      width: min(var(--max), calc(100% - 80px));
+      margin: 0 auto;
+      padding: 160px 0 74px;
+      position: relative;
+      z-index: 3;
+      display: grid;
+      grid-template-columns: minmax(0, 760px) 330px;
+      gap: 92px;
+      align-items: end;
+    }
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 0 0 24px;
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 48px;
+      height: 1px;
+      background: currentColor;
+    }
+    .hero h1 {
+      max-width: 760px;
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(64px, 7vw, 108px);
+      font-weight: 500;
+      line-height: .98;
+      letter-spacing: 0;
+    }
+    .hero-lead {
+      max-width: 670px;
+      margin: 26px 0 0;
+      color: rgba(251, 247, 239, .86);
+      font-size: 19px;
+      line-height: 1.9;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 36px;
+    }
+    .trust-box {
+      border-left: 1px solid rgba(255, 247, 239, .24);
+      padding-left: 26px;
+      color: rgba(251, 247, 239, .86);
+    }
+    .trust-label {
+      display: grid;
+      gap: 12px;
+    }
+    .trust-label p {
+      margin: 0;
+      padding: 0 0 12px;
+      border-bottom: 1px solid rgba(255, 247, 239, .16);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+    .trust-label strong {
+      display: block;
+      color: var(--ivory);
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 1.25;
+    }
+
+    .section {
+      padding: 136px 0;
+      position: relative;
+    }
+    .section.dark {
+      color: var(--ivory);
+      background: var(--charcoal);
+    }
+    .section.alt {
+      background: #f4ecdf;
+    }
+    .container {
+      width: min(var(--max), calc(100% - 80px));
+      margin: 0 auto;
+    }
+    .section-heading {
+      display: grid;
+      grid-template-columns: minmax(0, 460px) minmax(0, 620px);
+      gap: 120px;
+      align-items: end;
+      margin-bottom: 58px;
+    }
+    .section-kicker {
+      margin: 0 0 12px;
+      color: var(--bronze);
+      font-size: 12px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+    .section.dark .section-kicker { color: var(--gold); }
+    h2 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(36px, 4.6vw, 64px);
+      font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+    .section-copy {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.9;
+    }
+    .section.dark .section-copy { color: rgba(251, 247, 239, .72); }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 30px;
+    }
+    .image-card {
+      position: relative;
+      min-height: 430px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--warm-black);
+      color: var(--ivory);
+    }
+    .image-card img {
+      height: 100%;
+      min-height: 430px;
+      object-fit: cover;
+      opacity: .78;
+      filter: saturate(.82) contrast(.96);
+      transform: scale(1.02);
+      transition: transform .5s ease, opacity .5s ease;
+    }
+    .image-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(20, 17, 14, .82), rgba(20, 17, 14, .08) 62%);
+    }
+    .image-card:hover img {
+      transform: scale(1.06);
+      opacity: .9;
+    }
+    .card-content {
+      position: absolute;
+      inset: auto 0 0;
+      z-index: 1;
+      padding: 38px;
+    }
+    .card-index {
+      display: block;
+      margin-bottom: 18px;
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 28px;
+      line-height: 1;
+    }
+    .image-card h3 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 29px;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+    .image-card p {
+      margin: 12px 0 24px;
+      color: rgba(251, 247, 239, .78);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .fine-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: inherit;
+      font-size: 13px;
+      letter-spacing: .08em;
+    }
+    .fine-link::after {
+      content: "";
+      width: 38px;
+      height: 1px;
+      background: currentColor;
+      opacity: .64;
+      transition: width .2s ease;
+    }
+    .fine-link:hover::after { width: 54px; }
+
+    .compare-wrap {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      overflow-x: auto;
+      background: rgba(251, 247, 239, .62);
+    }
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 1060px;
+      font-size: 13px;
+    }
+    .compare-table th,
+    .compare-table td {
+      padding: 28px 24px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--line);
+      line-height: 1.7;
+    }
+    .compare-table th {
+      color: var(--bronze);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      background: rgba(215, 196, 164, .16);
+    }
+    .compare-table tr:last-child td { border-bottom: 0; }
+    .compare-table strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--espresso);
+      font-family: var(--serif);
+      font-size: 23px;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+    .rating {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      color: var(--bronze);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 28px;
+      padding: 5px 10px;
+      border: 1px solid rgba(48, 37, 30, .18);
+      border-radius: 999px;
+      color: var(--olive);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .month-card {
+      min-height: 188px;
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: rgba(251, 247, 239, .72);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .month-card.is-prime {
+      background: var(--espresso);
+      color: var(--ivory);
+      border-color: var(--espresso);
+    }
+    .month-card.is-soft {
+      background: #eee2cf;
+    }
+    .month-number {
+      font-family: var(--serif);
+      font-size: 34px;
+      line-height: 1;
+    }
+    .month-card small {
+      display: block;
+      margin-top: 8px;
+      color: var(--bronze);
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .month-card.is-prime small { color: var(--gold); }
+    .month-card p {
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.65;
+    }
+    .month-card.is-prime p { color: rgba(251, 247, 239, .78); }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
+    }
+    .product-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: rgba(251, 247, 239, .76);
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
+      transition: border-color .2s ease, transform .2s ease, background .2s ease;
+    }
+    .product-card:hover {
+      border-color: rgba(142, 106, 67, .48);
+      background: rgba(251, 247, 239, .94);
+      transform: translateY(-2px);
+    }
+    .product-card:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 4px;
+    }
+    .product-card .media {
+      height: 230px;
+      overflow: hidden;
+      background: var(--warm-black);
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    }
+    .product-card img {
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(.82) contrast(.98);
+      transition: transform .45s ease;
+    }
+    .product-card:hover img { transform: scale(1.05); }
+    .product-body {
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .product-body h3 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 27px;
+      font-weight: 500;
+      line-height: 1.18;
+    }
+    .positioning {
+      margin: 10px 0 18px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .meta-list {
+      display: grid;
+      gap: 14px;
+      margin: 0 0 30px;
+      padding: 24px 0 0;
+      border-top: 1px solid var(--line);
+      list-style: none;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+    .meta-list b {
+      display: inline-block;
+      min-width: 72px;
+      color: var(--espresso);
+      font-weight: 600;
+    }
+    .product-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: auto;
+    }
+    .product-actions .btn {
+      min-height: 42px;
+      padding: 11px 10px;
+      font-size: 12px;
+      white-space: normal;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+    .step {
+      min-height: 260px;
+      padding: 44px 40px;
+      border: 1px solid var(--line-dark);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 247, 239, .035);
+    }
+    .step:last-child { border-right: 1px solid var(--line-dark); }
+    .step-number {
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 46px;
+      line-height: 1;
+    }
+    .step h3 {
+      margin: 42px 0 12px;
+      font-family: var(--serif);
+      font-size: 31px;
+      font-weight: 500;
+      line-height: 1.15;
+    }
+    .step p {
+      margin: 0;
+      color: rgba(251, 247, 239, .72);
+      font-size: 14px;
+      line-height: 1.85;
+    }
+
+    .assurance-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+    .assurance-card {
+      min-height: 178px;
+      padding: 36px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: rgba(251, 247, 239, .58);
+    }
+    .line-icon {
+      width: 34px;
+      height: 34px;
+      margin-bottom: 24px;
+      color: var(--bronze);
+    }
+    .line-icon svg {
+      width: 100%;
+      height: 100%;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.45;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .assurance-card h3 {
+      margin: 0 0 9px;
+      font-family: var(--serif);
+      font-size: 25px;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+    .assurance-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    .final-cta {
+      padding: 118px 0;
+      color: var(--ivory);
+      background:
+        linear-gradient(90deg, rgba(23, 21, 19, .96), rgba(36, 50, 41, .9)),
+        url("https://images.unsplash.com/photo-1523805009345-7448845a9e53?q=80&w=2200&auto=format&fit=crop") center / cover;
+    }
+    .final-shell {
+      width: min(var(--max), calc(100% - 80px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 58px;
+      align-items: center;
+    }
+    .final-cta h2 {
+      max-width: 720px;
+      font-size: clamp(40px, 5vw, 70px);
+    }
+    .final-cta p {
+      max-width: 680px;
+      margin: 18px 0 0;
+      color: rgba(251, 247, 239, .76);
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translate3d(0, 24px, 0);
+      transition:
+        opacity .75s ease,
+        transform .75s cubic-bezier(.22, 1, .36, 1),
+        border-color .28s ease,
+        background .28s ease,
+        box-shadow .28s ease;
+      will-change: opacity, transform;
+    }
+    .reveal-on-scroll.is-visible {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+    .image-card.reveal-on-scroll.is-visible:hover,
+    .month-card.reveal-on-scroll.is-visible:hover,
+    .product-card.reveal-on-scroll.is-visible:hover,
+    .assurance-card.reveal-on-scroll.is-visible:hover {
+      transform: translate3d(0, -6px, 0);
+      box-shadow: 0 22px 58px rgba(48, 37, 30, .09);
+    }
+    .step.reveal-on-scroll.is-visible:hover {
+      transform: translate3d(0, -4px, 0);
+      background: rgba(255, 247, 239, .06);
+    }
+    .compare-table tbody tr.reveal-on-scroll.is-visible:hover {
+      background: rgba(198, 166, 107, .08);
+    }
+    .btn:hover,
+    .header-cta:hover {
+      box-shadow: 0 16px 34px rgba(48, 37, 30, .16);
+    }
+    .line-icon,
+    .card-index,
+    .month-number {
+      transition: transform .28s ease, color .28s ease;
+    }
+    .assurance-card:hover .line-icon,
+    .image-card:hover .card-index,
+    .month-card:hover .month-number {
+      transform: translateY(-2px) scale(1.04);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+      .reveal-on-scroll {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    @media (max-width: 1120px) {
+      .nav-links { display: none; }
+      .hero-shell,
+      .section-heading {
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+      .trust-box {
+        max-width: 520px;
+        border-left: 0;
+        padding: 22px 0 0;
+        border-top: 1px solid rgba(255, 247, 239, .24);
+      }
+      .category-grid,
+      .assurance-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .calendar-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 720px) {
+      body::before { background-size: 72px 72px; }
+      .site-header { height: 68px; }
+      .nav-shell,
+      .container,
+      .hero-shell,
+      .final-shell {
+        width: min(100% - 40px, var(--max));
+      }
+      .brand {
+        min-width: auto;
+        font-size: 20px;
+      }
+      .brand span { display: none; }
+      .header-cta {
+        min-height: 38px;
+        padding: 9px 12px;
+        font-size: 12px;
+      }
+      .hero {
+        min-height: 760px;
+        align-items: end;
+        background-position: 58% center;
+      }
+      .hero-rail { display: none; }
+      .hero-shell {
+        padding: 122px 0 44px;
+      }
+      .eyebrow {
+        margin-bottom: 18px;
+        font-size: 11px;
+      }
+      .hero h1 {
+        max-width: 350px;
+        font-size: 58px;
+        line-height: 1.02;
+      }
+      .hero-lead {
+        font-size: 16px;
+        line-height: 1.85;
+      }
+      .hero-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+      .btn {
+        width: 100%;
+        white-space: normal;
+        text-align: center;
+      }
+      .trust-label strong { font-size: 20px; }
+      .section { padding: 76px 0; }
+      .section-heading { margin-bottom: 30px; }
+      h2 { font-size: 38px; }
+      .section-copy { font-size: 15px; }
+      .category-grid,
+      .product-grid,
+      .assurance-grid,
+      .steps,
+      .final-shell {
+        grid-template-columns: 1fr;
+      }
+      .image-card,
+      .image-card img {
+        min-height: 360px;
+      }
+      .card-content { padding: 24px; }
+      .calendar-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .month-card {
+        min-height: 166px;
+        padding: 17px;
+      }
+      .compare-wrap {
+        margin-inline: -16px;
+        padding-left: 16px;
+      }
+      .product-card .media { height: 218px; }
+      .product-actions { grid-template-columns: 1fr; }
+      .step {
+        min-height: auto;
+        border-right: 0;
+        border-bottom: 1px solid var(--line-dark);
+      }
+      .step:last-child { border-bottom: 0; }
+      .step h3 { margin-top: 30px; }
+      .final-cta { padding: 78px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="nav-shell">
+      <a class="brand" href="#top" aria-label="WOTA 非洲高端旅行">WOTA <span>AFRICA</span></a>
+      <nav class="nav-links" aria-label="主要導覽">
+        <a href="#compare">目的地比較</a>
+        <a href="#styles">體驗分類</a>
+        <a href="#season">最佳季節</a>
+        <a href="#products">推薦行程</a>
+        <a href="#assurance">安心資訊</a>
+      </nav>
+      <a class="header-cta" href="#consult">請顧問推薦</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="非洲高端半客製化行程主視覺">
+      <div class="hero-rail">AFRICA BY WOTA</div>
+      <div class="hero-shell">
+        <div>
+          <p class="eyebrow">Luxury Safari Advisory</p>
+          <h1>非洲，不只是 Safari。</h1>
+          <p class="hero-lead">由 WOTA 顧問為你設計一趟安全、舒適、稀缺的高端非洲旅程。依照目的地、季節、預算、同行成員、體力與體驗偏好，先選對方向，再半客製成你的版本。</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary gold" href="#consult">
+              請顧問推薦適合我的非洲行程
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="#products">先看看推薦行程</a>
+          </div>
+        </div>
+        <aside class="trust-box" aria-label="WOTA 信任標籤">
+          <div class="trust-label">
+            <p><strong>WOTA 顧問實地考察</strong>以季節、路線、住宿節奏與體力負擔做初步判斷。</p>
+            <p><strong>合作供應商經驗</strong>串接當地 DMC、Lodge、內飛與備援支援。</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="styles">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Travel Styles</p>
+            <h2>你適合哪一種非洲？</h2>
+          </div>
+          <p class="section-copy">WOTA 不先用國家分類，而是先理解你想完成的旅行狀態。第一次非洲、三代同行、私人保護區、蜜月或豪華鐵道，背後需要完全不同的季節、節奏與預算邏輯。</p>
+        </div>
+        <div class="category-grid">
+          <article class="image-card">
+            <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="非洲草原上的長頸鹿與遠山">
+            <div class="card-content">
+              <span class="card-index">01</span>
+              <h3>第一次非洲 Safari</h3>
+              <p>安全、好理解、動物密度高，適合從肯亞、坦尚尼亞或南非私人保護區開始。</p>
+              <a class="fine-link" href="#products">看入門路線</a>
+            </div>
+          </article>
+          <article class="image-card">
+            <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="非洲草原上的獅子">
+            <div class="card-content">
+              <span class="card-index">02</span>
+              <h3>大遷徙</h3>
+              <p>鎖定 7–10 月河渡或 1–3 月 Ndutu 新生季，適合動物迷與攝影旅客。</p>
+              <a class="fine-link" href="#season">比較季節</a>
+            </div>
+          </article>
+          <article class="image-card">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="高端 Lodge 與自然景觀">
+            <div class="card-content">
+              <span class="card-index">03</span>
+              <h3>私人保護區</h3>
+              <p>少量房間、專屬車輛與更安靜的 Safari 節奏，適合重視隱私與服務的人。</p>
+              <a class="fine-link" href="#compare">看目的地</a>
+            </div>
+          </article>
+          <article class="image-card">
+            <img src="https://images.unsplash.com/photo-1534177616072-ef7dc120449d?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="非洲自然風景與野生動物">
+            <div class="card-content">
+              <span class="card-index">04</span>
+              <h3>三代家庭 / 熟齡</h3>
+              <p>降低拉車、增加休息日與分流活動，讓長輩、小孩與夫妻都能舒適參與。</p>
+              <a class="fine-link" href="#assurance">看安心資訊</a>
+            </div>
+          </article>
+          <article class="image-card">
+            <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="印度洋海島與沙灘">
+            <div class="card-content">
+              <span class="card-index">05</span>
+              <h3>蜜月 / 紀念日</h3>
+              <p>Safari 後延伸 Zanzibar、Seychelles 或 Mauritius，用海島 villa 收尾。</p>
+              <a class="fine-link" href="#products">看海島延伸</a>
+            </div>
+          </article>
+          <article class="image-card">
+            <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="豪華鐵道旅程">
+            <div class="card-content">
+              <span class="card-index">06</span>
+              <h3>豪華鐵道</h3>
+              <p>以 Rovos Rail、維多利亞瀑布與南部非洲銜接，適合熟齡與慢旅行。</p>
+              <a class="fine-link" href="#products">看鐵道路線</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="compare">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Destination Matrix</p>
+            <h2>目的地快速比較</h2>
+          </div>
+          <p class="section-copy">高端非洲的關鍵不是「哪一國最有名」，而是哪一條路線符合你的季節、體力、預算與同行成員。下表先幫你建立第一層判斷。</p>
+        </div>
+        <div class="compare-wrap" role="region" aria-label="非洲目的地比較表" tabindex="0">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>目的地</th>
+                <th>適合誰</th>
+                <th>最佳季節</th>
+                <th>核心體驗</th>
+                <th>體力負擔</th>
+                <th>預算級距</th>
+                <th>第一次推薦度</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>肯亞</strong>Masai Mara</td>
+                <td>第一次非洲、親子、攝影、動物愛好者</td>
+                <td>7–10 月大遷徙；全年可規劃經典 Safari</td>
+                <td>大草原、Big Five、熱氣球、河渡機會</td>
+                <td><span class="pill">中</span></td>
+                <td>每人約 USD 15,000–30,000+</td>
+                <td><span class="rating">★★★★★</span></td>
+              </tr>
+              <tr>
+                <td><strong>坦尚尼亞</strong>Serengeti / Ngorongoro</td>
+                <td>想看完整生態大戲、攝影、蜜月延伸海島</td>
+                <td>1–3 月 Ndutu；6–10 月北部乾季</td>
+                <td>Serengeti、火山口、幼崽季、Zanzibar</td>
+                <td><span class="pill">中–高</span></td>
+                <td>每人約 USD 18,000–40,000+</td>
+                <td><span class="rating">★★★★☆</span></td>
+              </tr>
+              <tr>
+                <td><strong>南非</strong>Cape Town / Sabi Sand</td>
+                <td>熟齡、夫妻、三代家庭、想舒適入門</td>
+                <td>5–10 月 Safari；城市酒莊需另看季節</td>
+                <td>私人保護區、酒莊、城市美學、低拉車</td>
+                <td><span class="pill">低</span></td>
+                <td>每人約 USD 12,000–25,000</td>
+                <td><span class="rating">★★★★★</span></td>
+              </tr>
+              <tr>
+                <td><strong>波札那</strong>Okavango Delta</td>
+                <td>高資產、二訪非洲、重視隱私與 lodge 品質</td>
+                <td>6–10 月乾季與水位交會</td>
+                <td>Fly-in Safari、水域生態、少人高端營地</td>
+                <td><span class="pill">低–中</span></td>
+                <td>每人約 USD 25,000–50,000+</td>
+                <td><span class="rating">★★★☆☆</span></td>
+              </tr>
+              <tr>
+                <td><strong>納米比亞</strong>Sossusvlei / Etosha</td>
+                <td>地景攝影、設計感旅行、想看非草原非洲</td>
+                <td>5–10 月乾季；全年有地景價值</td>
+                <td>沙丘、星空、荒野 lodge、地景公路</td>
+                <td><span class="pill">中</span></td>
+                <td>每人約 USD 15,000–30,000+</td>
+                <td><span class="rating">★★★☆☆</span></td>
+              </tr>
+              <tr>
+                <td><strong>盧安達</strong>Gorilla Trekking</td>
+                <td>保育、高端冒險、已去過 Safari 的旅客</td>
+                <td>全年可評估；需避開不適合的雨季條件</td>
+                <td>山地大猩猩、保育、精品 lodge、深度體驗</td>
+                <td><span class="pill">中–高</span></td>
+                <td>每人約 USD 25,000–45,000+</td>
+                <td><span class="rating">★★☆☆☆</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="season">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Season Preview</p>
+            <h2>先看月份，再選非洲。</h2>
+          </div>
+          <p class="section-copy">非洲不是全年同一種風景。WOTA 會先看你的出發月份，再判斷該把預算放在大遷徙、私人保護區、南部非洲乾季，或年底家庭與海島延伸。</p>
+        </div>
+        <div class="calendar-grid">
+          <article class="month-card is-prime"><div><span class="month-number">01</span><small>Jan</small></div><p>坦尚尼亞 Ndutu 新生季、南非城市與 Safari、納米比亞地景。</p></article>
+          <article class="month-card is-prime"><div><span class="month-number">02</span><small>Feb</small></div><p>Serengeti 幼崽與掠食者活動，適合攝影與深度 Safari。</p></article>
+          <article class="month-card is-prime"><div><span class="month-number">03</span><small>Mar</small></div><p>東非仍可規劃，南部非洲景觀濃郁，需顧問評估雨季。</p></article>
+          <article class="month-card is-soft"><div><span class="month-number">04</span><small>Apr</small></div><p>部分目的地進入淡季，適合彈性預算與不追逐大場面的旅客。</p></article>
+          <article class="month-card is-soft"><div><span class="month-number">05</span><small>May</small></div><p>南非、納米比亞逐漸進入舒服季節，適合熟齡低壓路線。</p></article>
+          <article class="month-card is-prime"><div><span class="month-number">06</span><small>Jun</small></div><p>乾季展開，肯亞、坦尚尼亞、波札那、南非都進入強勢期。</p></article>
+          <article class="month-card is-prime"><div><span class="month-number">07</span><small>Jul</small></div><p>大遷徙河渡話題期開始，Masai Mara 與北 Serengeti 需早訂。</p></article>
+          <article class="month-card is-prime"><div><span class="month-number">08</span><small>Aug</small></div><p>Safari 黃金月，適合家庭暑假與第一次非洲經典路線。</p></article>
+          <article class="month-card is-prime"><div><span class="month-number">09</span><small>Sep</small></div><p>乾季動物集中，波札那 Okavango 與私人保護區表現穩定。</p></article>
+          <article class="month-card is-prime"><div><span class="month-number">10</span><small>Oct</small></div><p>大遷徙尾聲與南部非洲乾季後段，適合避開暑假人潮。</p></article>
+          <article class="month-card is-prime"><div><span class="month-number">11</span><small>Nov</small></div><p>年底家庭、蜜月與海島延伸可開始規劃，需看短雨季影響。</p></article>
+          <article class="month-card is-prime"><div><span class="month-number">12</span><small>Dec</small></div><p>節慶高端假期，南非、肯亞短雨季與印度洋海島需提前卡位。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="products">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Semi-custom Journeys</p>
+            <h2>推薦半客製產品</h2>
+          </div>
+          <p class="section-copy">每條產品先保留 70% 的清楚骨架：國家、主路線、天數、季節、交通與預算級距；再由顧問依你的住宿偏好、體力、家庭成員與特殊體驗調整剩下 30%。</p>
+        </div>
+        <div class="product-grid">
+          <a class="product-card" href="prd01_kanya.html" aria-label="前往肯亞單一產品頁：第一次非洲舒適 Safari">
+            <div class="media"><img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" alt="肯亞 Safari 草原與象群"></div>
+            <div class="product-body">
+              <h3>第一次非洲舒適 Safari</h3>
+              <p class="positioning">以穩定接待、動物密度與舒適 lodge，降低第一次非洲的不確定感。</p>
+              <ul class="meta-list">
+                <li><b>適合誰</b>第一次非洲、熟齡、家庭</li>
+                <li><b>建議天數</b>9–11 天</li>
+                <li><b>最佳季節</b>6–10 月；南非 5–10 月</li>
+                <li><b>預算級距</b>每人約 USD 12,000–25,000</li>
+                <li><b>體力程度</b>低–中</li>
+              </ul>
+              <div class="product-actions">
+                <span class="btn btn-outline">查看行程骨架</span>
+                <span class="btn btn-primary">前往肯亞產品頁</span>
+              </div>
+            </div>
+          </a>
+          <a class="product-card" href="prd01_kanya.html" aria-label="前往肯亞單一產品頁：肯亞 / 坦尚尼亞大遷徙">
+            <div class="media"><img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" alt="非洲草原獅子特寫"></div>
+            <div class="product-body">
+              <h3>肯亞 / 坦尚尼亞大遷徙</h3>
+              <p class="positioning">為想看動物大場面的旅客，安排河渡、熱氣球與攝影節奏。</p>
+              <ul class="meta-list">
+                <li><b>適合誰</b>動物愛好者、攝影、親子</li>
+                <li><b>建議天數</b>10–12 天</li>
+                <li><b>最佳季節</b>7–10 月；1–3 月 Ndutu</li>
+                <li><b>預算級距</b>每人約 USD 15,000–35,000+</li>
+                <li><b>體力程度</b>中</li>
+              </ul>
+              <div class="product-actions">
+                <span class="btn btn-outline">查看行程骨架</span>
+                <span class="btn btn-primary">前往肯亞產品頁</span>
+              </div>
+            </div>
+          </a>
+          <a class="product-card" href="prd01_kanya.html" aria-label="前往肯亞單一產品頁：南非城市酒莊 + Sabi Sand">
+            <div class="media"><img src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" alt="南非海岸與城市景觀"></div>
+            <div class="product-body">
+              <h3>南非城市酒莊 + Sabi Sand</h3>
+              <p class="positioning">把 Cape Town、酒莊與私人保護區組成不過度奔波的高端入門。</p>
+              <ul class="meta-list">
+                <li><b>適合誰</b>夫妻、熟齡、企業主</li>
+                <li><b>建議天數</b>10–12 天</li>
+                <li><b>最佳季節</b>5–10 月 Safari</li>
+                <li><b>預算級距</b>每人約 USD 12,000–25,000</li>
+                <li><b>體力程度</b>低</li>
+              </ul>
+              <div class="product-actions">
+                <span class="btn btn-outline">查看行程骨架</span>
+                <span class="btn btn-primary">前往肯亞產品頁</span>
+              </div>
+            </div>
+          </a>
+          <a class="product-card" href="prd01_kanya.html" aria-label="前往肯亞單一產品頁：波札那 Okavango Fly-in">
+            <div class="media"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" alt="自然中的高端 Lodge 露台"></div>
+            <div class="product-body">
+              <h3>波札那 Okavango Fly-in</h3>
+              <p class="positioning">以小飛機串接少量房間營地，體驗水域與陸地交錯的頂級 Safari。</p>
+              <ul class="meta-list">
+                <li><b>適合誰</b>高資產、二訪非洲、隱私需求</li>
+                <li><b>建議天數</b>8–10 天</li>
+                <li><b>最佳季節</b>6–10 月</li>
+                <li><b>預算級距</b>每人約 USD 25,000–50,000+</li>
+                <li><b>體力程度</b>低–中</li>
+              </ul>
+              <div class="product-actions">
+                <span class="btn btn-outline">查看行程骨架</span>
+                <span class="btn btn-primary">前往肯亞產品頁</span>
+              </div>
+            </div>
+          </a>
+          <a class="product-card" href="prd01_kanya.html" aria-label="前往肯亞單一產品頁：納米比亞沙漠星空">
+            <div class="media"><img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" alt="納米比亞沙丘與荒漠地景"></div>
+            <div class="product-body">
+              <h3>納米比亞沙漠星空</h3>
+              <p class="positioning">為攝影與設計感旅客安排沙丘、荒野 lodge、星空與野生動物。</p>
+              <ul class="meta-list">
+                <li><b>適合誰</b>攝影、設計感、冒險客</li>
+                <li><b>建議天數</b>10–12 天</li>
+                <li><b>最佳季節</b>5–10 月</li>
+                <li><b>預算級距</b>每人約 USD 15,000–30,000</li>
+                <li><b>體力程度</b>中</li>
+              </ul>
+              <div class="product-actions">
+                <span class="btn btn-outline">查看行程骨架</span>
+                <span class="btn btn-primary">前往肯亞產品頁</span>
+              </div>
+            </div>
+          </a>
+          <a class="product-card" href="prd01_kanya.html" aria-label="前往肯亞單一產品頁：盧安達山地大猩猩">
+            <div class="media"><img src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" alt="山地大猩猩保育旅行"></div>
+            <div class="product-body">
+              <h3>盧安達山地大猩猩</h3>
+              <p class="positioning">稀缺、保育與高端冒險並重，適合已去過經典 Safari 的旅客。</p>
+              <ul class="meta-list">
+                <li><b>適合誰</b>保育、高端冒險、二訪非洲</li>
+                <li><b>建議天數</b>7–9 天</li>
+                <li><b>最佳季節</b>全年評估</li>
+                <li><b>預算級距</b>每人約 USD 18,000–40,000+</li>
+                <li><b>體力程度</b>中–高</li>
+              </ul>
+              <div class="product-actions">
+                <span class="btn btn-outline">查看行程骨架</span>
+                <span class="btn btn-primary">前往肯亞產品頁</span>
+              </div>
+            </div>
+          </a>
+          <a class="product-card" href="prd01_kanya.html" aria-label="前往肯亞單一產品頁：豪華鐵道 + 維多利亞瀑布">
+            <div class="media"><img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" alt="豪華鐵道列車穿越自然風景"></div>
+            <div class="product-body">
+              <h3>豪華鐵道 + 維多利亞瀑布</h3>
+              <p class="positioning">以南部非洲慢旅行銜接瀑布、Safari 與酒莊，舒適而有儀式感。</p>
+              <ul class="meta-list">
+                <li><b>適合誰</b>熟齡、夫妻、三代家庭</li>
+                <li><b>建議天數</b>8–12 天</li>
+                <li><b>最佳季節</b>依瀑布水量與 Safari 季節判斷</li>
+                <li><b>預算級距</b>每人約 USD 18,000–35,000+</li>
+                <li><b>體力程度</b>低</li>
+              </ul>
+              <div class="product-actions">
+                <span class="btn btn-outline">查看行程骨架</span>
+                <span class="btn btn-primary">前往肯亞產品頁</span>
+              </div>
+            </div>
+          </a>
+          <a class="product-card" href="prd01_kanya.html" aria-label="前往肯亞單一產品頁：Safari + 印度洋海島蜜月">
+            <div class="media"><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" alt="印度洋海島沙灘與海水"></div>
+            <div class="product-body">
+              <h3>Safari + 印度洋海島蜜月</h3>
+              <p class="positioning">前段用 Safari 製造記憶點，後段用私密 villa 與海島節奏沉澱。</p>
+              <ul class="meta-list">
+                <li><b>適合誰</b>蜜月、紀念日、夫妻</li>
+                <li><b>建議天數</b>12–14 天</li>
+                <li><b>最佳季節</b>依海島與季風細看</li>
+                <li><b>預算級距</b>每人約 USD 18,000–35,000+</li>
+                <li><b>體力程度</b>低–中</li>
+              </ul>
+              <div class="product-actions">
+                <span class="btn btn-outline">查看行程骨架</span>
+                <span class="btn btn-primary">前往肯亞產品頁</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="consult">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">WOTA Advisory</p>
+            <h2>顧問把複雜的非洲，整理成可選擇的方向。</h2>
+          </div>
+          <p class="section-copy">高端非洲不是立即預訂商品。顧問會把你的月份、預算、同行成員、體力與想看的體驗，轉成 2–3 個合理方向，再進入半客製調整。</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <span class="step-number">01</span>
+            <h3>留下需求</h3>
+            <p>提供出發月份、同行成員、預算級距、體力狀態與你最想完成的非洲畫面。</p>
+          </article>
+          <article class="step">
+            <span class="step-number">02</span>
+            <h3>顧問推薦 2–3 個方向</h3>
+            <p>先比較肯亞、坦尚尼亞、南非、波札那、納米比亞或海島延伸是否適合。</p>
+          </article>
+          <article class="step">
+            <span class="step-number">03</span>
+            <h3>半客製調整行程</h3>
+            <p>再細調 lodge 等級、內飛、私人車、熱氣球、攝影 guide、休息日與安心準備。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="assurance">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Assurance Preview</p>
+            <h2>安心資訊不是 FAQ，而是顧問決策的一部分。</h2>
+          </div>
+          <p class="section-copy">非洲旅行的成交阻力常來自安全、健康、簽證、交通與體力不確定。WOTA 會把每段需要確認的事情拆開，讓你在詢問前就知道顧問會怎麼協助。</p>
+        </div>
+        <div class="assurance-grid">
+          <article class="assurance-card">
+            <div class="line-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5 39 11v11c0 10-6.4 17.1-15 21-8.6-3.9-15-11-15-21V11l15-6Z"/><path d="m17 24 5 5 10-12"/></svg></div>
+            <h3>安全</h3>
+            <p>依城市、保護區、交通段與當地支援拆開評估，不用單一國家印象判斷。</p>
+          </article>
+          <article class="assurance-card">
+            <div class="line-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M18 7h12"/><path d="M21 7v10L11 34a6 6 0 0 0 5.1 9h15.8A6 6 0 0 0 37 34L27 17V7"/><path d="M17 34h14"/><path d="M21 27h6"/></svg></div>
+            <h3>健康與疫苗</h3>
+            <p>把目的地、轉機國與保護區整理成旅遊醫學門診可判斷的資訊。</p>
+          </article>
+          <article class="assurance-card">
+            <div class="line-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="11" y="6" width="26" height="36" rx="2"/><path d="M18 15h12"/><path d="M18 23h12"/><path d="M18 31h7"/></svg></div>
+            <h3>簽證</h3>
+            <p>依台灣護照、多國銜接與最新規定提醒 eTA、eVisa 或事前簽證準備。</p>
+          </article>
+          <article class="assurance-card">
+            <div class="line-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 31 42 17"/><path d="m20 26-8-9 6-2 11 7"/><path d="m28 23 8 10-6 2-10-8"/></svg></div>
+            <h3>內飛與交通</h3>
+            <p>說明小飛機、軟包行李、轉機、車程與每日移動時間，避免現場落差。</p>
+          </article>
+          <article class="assurance-card">
+            <div class="line-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="18" cy="16" r="5"/><circle cx="32" cy="18" r="4"/><path d="M8 39c1.8-7 6-10 10-10s8.2 3 10 10"/><path d="M26 31c1.7-2.2 3.8-3.2 6-3.2 3.2 0 6.1 2.1 7.5 6.2"/></svg></div>
+            <h3>長輩小孩適合度</h3>
+            <p>以步行量、上下車、拉車時間、休息日與分流活動判斷家庭版本。</p>
+          </article>
+          <article class="assurance-card">
+            <div class="line-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6 38 13v11c0 9-5.2 15.5-14 18-8.8-2.5-14-9-14-18V13l14-7Z"/><path d="M24 16v12"/><path d="M18 22h12"/></svg></div>
+            <h3>保險與緊急支援</h3>
+            <p>提醒旅遊中斷、海外醫療、緊急撤離與當地 24 小時聯絡資訊。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" aria-label="最終詢問行動">
+      <div class="final-shell">
+        <div>
+          <p class="section-kicker">Begin With A Conversation</p>
+          <h2>還不知道適合去哪裡？</h2>
+          <p>把你的月份、預算、同行成員與想像中的非洲告訴 WOTA。顧問會先幫你縮小方向，再推薦最適合的半客製行程骨架。</p>
+        </div>
+        <a class="btn btn-primary gold" href="#consult">請顧問推薦適合我的非洲行程</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const header = document.getElementById("siteHeader");
+    const onScroll = () => {
+      header.classList.toggle("is-scrolled", window.scrollY > 24);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    const revealTargets = document.querySelectorAll([
+      ".section-heading",
+      ".image-card",
+      ".compare-table tbody tr",
+      ".month-card",
+      ".product-card",
+      ".step",
+      ".assurance-card",
+      ".final-shell"
+    ].join(","));
+
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.16, rootMargin: "0px 0px -8% 0px" });
+
+      revealTargets.forEach((el, index) => {
+        el.classList.add("reveal-on-scroll");
+        el.style.transitionDelay = `${Math.min(index % 6, 5) * 55}ms`;
+        revealObserver.observe(el);
+      });
+    } else {
+      revealTargets.forEach((el) => el.classList.add("is-visible"));
+    }
+  </script>
+</body>
+</html>
